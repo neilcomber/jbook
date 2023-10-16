@@ -1,3 +1,10 @@
+A standalone code sanbox app that allows you to write and document code.
+
+Transpiles & Bundles using ES Build
+
+Executes code in a preview window.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
