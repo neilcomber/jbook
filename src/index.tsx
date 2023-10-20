@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom/client';
 import { unpkgPathPlugin } from './plugins/unpkg-path-plugin';
 import { fetchPlugin } from './plugins/fetch-plugin';
+import CodeEditor from './components/code-editor';
 
 
 const el = document.getElementById('root');
@@ -80,6 +81,9 @@ const App = () => {
   `
 
   return <div>
+    <CodeEditor initialValue="const a = 1;"
+      onChange={(value)=> setText(value)}
+    />
     <textarea value={text} onChange={(e) => {setText(e.target.value)}}></textarea>
     <div>
       <button onClick={handleClick}>Submit</button>
