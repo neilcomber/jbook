@@ -4,6 +4,10 @@ Transpiles & Bundles using ES Build
 
 Executes code in a preview window.
 
+WHAT THE BUNDLER CAN@T DO:
+
+Do additional imports from CSS files
+does not perform checks the user isn't creating infinite loops.
 
 # Getting Started with Create React App
 
