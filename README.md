@@ -4,6 +4,8 @@ Transpiles & Bundles using ES Build
 
 Executes code in a preview window.
 
+uses Monaco open source code editor
+
 WHAT THE BUNDLER CAN NOT DO:
 
 Do additional imports from CSS files

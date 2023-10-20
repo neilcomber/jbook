@@ -15,7 +15,6 @@ const App = () => {
   const iframe = useRef<any>();
 
   const [text, setText] = useState("");
-  const [code, setCode] = useState("");
   
 
   const startService = async () => {
@@ -34,6 +33,8 @@ const App = () => {
     if (!ref.current) {
       return;
     } 
+
+    iframe.current.srcdoc = html;
    
     const result = await ref.current.build({
       entryPoints: ['index.js'], 
@@ -63,7 +64,14 @@ const App = () => {
       <div id="root"></div>
       <script>
         window.addEventListener('message', (event) => {
-          eval(event.data);
+          try {
+            eval(event.data);
+          }
+          catch (err) {
+            const root = document.querySelector('#root');
+            root.innerHTML = '<div style="color: red;"><h4>Runtime Error</h4>' + err + '</div>';
+            console.error(err);
+          }
         }, false)
       </script>
     </body>
@@ -72,12 +80,11 @@ const App = () => {
   `
 
   return <div>
-    <textarea value={text} onChange={(e)=>{setText(e.target.value)}}></textarea>
+    <textarea value={text} onChange={(e) => {setText(e.target.value)}}></textarea>
     <div>
       <button onClick={handleClick}>Submit</button>
     </div>
-    <pre>{code}</pre>
-    <iframe ref={iframe} sandbox="allow-scripts" srcDoc={html} />
+    <iframe title="preview" ref={iframe} sandbox="allow-scripts" srcDoc={html} />
   </div>;
 }
 
