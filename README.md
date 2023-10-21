@@ -6,6 +6,8 @@ Executes code in a preview window.
 
 uses Monaco open source code editor
 
+uses bulma swatch css library to do most of the styling
+
 WHAT THE BUNDLER CAN NOT DO:
 
 Do additional imports from CSS files
