@@ -8,6 +8,8 @@ uses Monaco open source code editor
 
 uses bulma swatch css library to do most of the styling
 
+usese react resize to have resizable code + preview windows
+
 WHAT THE BUNDLER CAN NOT DO:
 
 Do additional imports from CSS files
