@@ -3,6 +3,7 @@ import { useState } from 'react'
 import CodeEditor from './code-editor';
 import Preview from './preview';
 import bundle from '../bundler';
+import Resizable from './resizable';
 
 
 const CodeCell = () => {
@@ -17,16 +18,21 @@ const CodeCell = () => {
 
   };
 
-  return <div>
-    <CodeEditor initialValue="const a = 1;"
-      onChange={(value)=> setText(value)}
-    />
+  return
+  (
+    <Resizable direction='vertical'>
+      <div>
+        <CodeEditor initialValue="const a = 1;"
+          onChange={(value) => setText(value)}
+        />
     
-    <div>
-      <button onClick={handleClick}>Submit</button>
-    </div>
-    <Preview code={code} />
-  </div>;
+        <div>
+          <button onClick={handleClick}>Submit</button>
+        </div>
+        <Preview code={code} />
+      </div>
+    </Resizable>
+  );
 }
 
 
