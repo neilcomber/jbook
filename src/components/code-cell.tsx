@@ -15,24 +15,21 @@ const CodeCell = () => {
     const output = await bundle(text); 
 
     setCode(output);
-
+ 
   };
 
-  return
-  (
-    <Resizable direction='vertical'>
-      <div>
-        <CodeEditor initialValue="const a = 1;"
-          onChange={(value) => setText(value)}
-        />
+  return (
+    <Resizable direction="vertical">
+    <div style={({height: '100%', display: 'flex', flexDirection: 'row'})}>
+      <CodeEditor initialValue="const a = 1;"
+        onChange={(value) => setText(value)}
+      />
     
-        <div>
-          <button onClick={handleClick}>Submit</button>
-        </div>
-        <Preview code={code} />
+      <Preview code={code} />
       </div>
-    </Resizable>
+      </Resizable>
   );
+  
 }
 
 
