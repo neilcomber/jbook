@@ -10,6 +10,8 @@ uses bulma swatch css library to do most of the styling
 
 usese react resize to have resizable code + preview windows
 
+uses react-md-editor to build the markdown editor windows
+
 WHAT THE BUNDLER CAN NOT DO:
 
 Do additional imports from CSS files

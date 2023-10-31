@@ -10,6 +10,13 @@
   width: 100%
 }
 
+.preview-error {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: red;
+}
+
 .react-draggable-transparent-selection .preview-wrapper:after {
   content: "";
   position: absolute;
@@ -18,4 +25,8 @@
   bottom: 0;
   left: 0;
   opacity: 0;
+}
+
+body > iframe {
+  display: none;
 }
