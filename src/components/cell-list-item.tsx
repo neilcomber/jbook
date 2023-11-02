@@ -16,14 +16,14 @@ const CellListItem: React.FC<CellListItemProps> = ({ cell }) => {
     child = <CodeCell cell={cell} />
   } else {
     child = <TextEditor cell={cell} />
-  
+
   }
 
 
   return <div>
     <ActionBar id={cell.id} />
     {child}
-      </div>;
+  </div>;
 }
 
 export default CellListItem;
