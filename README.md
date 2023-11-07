@@ -14,7 +14,11 @@ uses react-md-editor to build the markdown editor windows
 
 uses immer to help with redux action creator updates
 
+<<<<<<< HEAD
 uses Lerna to create a small CLI for startup and file keeping
+=======
+uses Lerna to create a small CLI for startup and file keeping - with commander to help with commands
+>>>>>>> 212a29336b2541617fd7c6499a86ff44d1547e68
 
 WHAT THE BUNDLER CAN NOT DO:
 
@@ -70,4 +74,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 # jbook
+<<<<<<< HEAD
 # jbook-with-lerna
+=======
+>>>>>>> 212a29336b2541617fd7c6499a86ff44d1547e68
