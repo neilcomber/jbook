@@ -1,4 +1,4 @@
-import './action-bar.css'
+import './action-bar.css';
 import { useActions } from '../hooks/use-actions';
 import { deleteCell, moveCell } from '../state/action-creators';
 

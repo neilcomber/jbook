@@ -14,6 +14,8 @@ uses react-md-editor to build the markdown editor windows
 
 uses immer to help with redux action creator updates
 
+uses Lerna to create a small CLI for startup and file keeping
+
 WHAT THE BUNDLER CAN NOT DO:
 
 Do additional imports from CSS files
