@@ -1,6 +1,6 @@
 {
   "name": "jsnotebook-nc",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "files": [
     "dist"
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jsnotebook-nc/local-client": "^1.0.0"
+    "@jsnotebook-nc/local-client": "^2.0.0"
   },
   "devDependencies": {
-    "@jsnotebook-nc/local-api": "^1.0.0",
+    "@jsnotebook-nc/local-api": "^2.0.0",
     "@types/node": "^20.8.10",
     "commander": "^11.1.0",
     "esbuild": "0.8.26",
