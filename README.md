@@ -1,31 +1,31 @@
-A standalone code sanbox app that allows you to write and document code.
+## Code Sandbox App
 
-Transpiles & Bundles using ES Build
+This is a standalone code sandbox app that allows you to write, test and document your Javascript & React code, built with React 16.
 
-Executes code in a preview window.
+I built it to have somewhere to quickly test small snippets of code, where i can also save my documentation locally. I was also eager to use ES build to work with a bundler built in go, and figuring out how integrating with web assembly would go
 
-uses Monaco open source code editor
+### Some Technologies Used
 
-uses bulma swatch css library to do most of the styling
+- Built primarily with React 16 & Redux. Also React-Resize to add resizing capabilities to the code & preview windows.
+  
+- Transpiles & Bundles users code using ES Build, executing & displaying in an iframe preview window.
 
-usese react resize to have resizable code + preview windows
+- The code editor is powered by the Monaco open source code editor.
 
-uses react-md-editor to build the markdown editor windows
+- uses react-md-editor to add markdown capability to the documentation window.
 
-uses immer to help with redux action creator updates
+- uses Immer to help with redux's immutable logic.
 
-uses Lerna to create a small CLI for startup and file keeping
+- uses Lerna to create a small CLI to run startup commands.
 
-WHAT THE BUNDLER CAN NOT DO:
+- uses bulma swatch css library to do most of the CSS
 
-Do additional imports from CSS files
-does not perform checks the user isn't creating infinite loops.
-uesrs will not be able to use cookies with their code
-users will not be able to access local storage with their code
+### Things To improve moving forward:
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Sandbox can currently only import 1 css file for user code execution, in the future i would like it to take multiple files
+The bundler does not perform checks the user isn't creating infinite loops, it would be nice to add some logic to check this pre-compiling.
+users cannot currently use cookies with their code
+users cannot currently access local storage with their code
 
 ## Available Scripts
 
@@ -39,35 +39,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# jbook
-# jbook-with-lerna
